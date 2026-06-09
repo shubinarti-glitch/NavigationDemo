@@ -54,7 +54,13 @@ fun MainScreen(modifier: Modifier = Modifier) {
     NavDisplay(
         modifier = modifier,
         backStack = backStack,
-        onBack = { backStack.removeLastOrNull() },
+        // §9 ЛР (опция): при системном «Назад» пропускаем Welcome и
+        // возвращаемся сразу на Home, очищая весь стек до корня.
+        onBack = {
+            while (backStack.size > 1) {
+                backStack.removeLastOrNull()
+            }
+        },
         entryProvider = entryProvider {
             entry<HomeScreen> {
                 Home(onNavigation)
