@@ -25,14 +25,14 @@ fun Profile(onClearBackStack: () -> Unit) {
     ) {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Text(
-                "Setup your profile",
+                "Настройка профиля",
                 style = MaterialTheme.typography.headlineSmall
             )
             Spacer(modifier = Modifier.size(30.dp))
             Button(onClick = {
                 onClearBackStack()
             }) {
-                Text(text = "Go Home")
+                Text(text = "На главную")
             }
         }
     }

@@ -38,7 +38,7 @@ fun Home(onNavigation: (NavKey) -> Unit) {
     ) {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             CustomTextField(
-                title = "Enter your name",
+                title = "Введите имя",
                 textState = userName,
                 onTextChange = onTextChange
             )
@@ -46,7 +46,7 @@ fun Home(onNavigation: (NavKey) -> Unit) {
             Button(onClick = {
                 onNavigation(WelcomeScreen(userName))
             }) {
-                Text(text = "Register")
+                Text(text = "Регистрация")
             }
         }
     }
